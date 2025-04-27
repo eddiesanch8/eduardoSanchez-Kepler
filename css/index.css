@@ -1,0 +1,60 @@
+body {
+  background-color: #919191;
+  color: #1a4e99;
+  font-family: Arial, sans-serif;
+  font size: 14px;
+}
+
+h1{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+h2{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #2a2a2a;
+}
+
+a{
+  color:#a1562d;
+  font-weight: 100;
+}
+
+#github{
+background-image: url(img/github.png);
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.lan{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #63aaec;
+}
+
+.about{
+  background-color: #70904F;
+  margin: 25px;
+  padding: 10px 5px;
+  color: #000;
+}
+
+.experience{
+  background-color:#906A48;
+  margin: 25px;
+  padding: 10px 5px;
+  color: #000;
+}
+
+.connect{
+  background-color: #70904F;
+  margin: 25px;
+  padding: 10px 5px;
+  color: #000;
+}
