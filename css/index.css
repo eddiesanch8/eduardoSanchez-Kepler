@@ -1,60 +1,171 @@
 body {
-  background-color: #919191;
+  margin: 0;
+  background-color: #cccaca;
   color: #1a4e99;
   font-family: Arial, sans-serif;
-  font size: 14px;
+  font-size: 14px;
 }
 
-h1{
+h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-
-h2{
+h2 {
   font-size: 25px;
   font-weight: bold;
   text-align: left;
   color: #2a2a2a;
 }
 
-a{
-  color:#a1562d;
+a {
+  color: #a1562d;
   font-weight: 100;
 }
 
-#github{
-background-image: url(img/github.png);
-background-repeat: no-repeat;
-background-size: 100%;
+/* The following is styling for different sections of my website*/
+
+.nav_headers {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+  color: #5dd076;
+  padding: 5px;
+  font-size: 1.1em;
+  background-color: #ffffff;
 }
 
-.lan{
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  color: #63aaec;
+.navheader {
+  margin: 0 10px;
+  padding: 25px 10px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.about{
-  background-color: #70904F;
+/* End of Nav styling*/
+
+/* Starting to style the about section*/
+
+#about {
+  background-color: #70904f;
   margin: 25px;
   padding: 10px 5px;
   color: #000;
 }
 
-.experience{
-  background-color:#906A48;
+/* End of styling for about section */
+
+/* The following is the start of exeperience styling for different sections of my website*/
+
+#experience {
+  background-color: #906a48;
   margin: 25px;
   padding: 10px 5px;
   color: #000;
 }
 
-.connect{
-  background-color: #70904F;
+.job {
+  display: flex;
+  background-color: #fbfbfb;
+  margin: 0 auto;
+  flex-direction: column;
+  border: 10px solid #ff0000; /* Border to work with CSS*/
+}
+
+.job_details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.job_details span {
+  padding-bottom: 5px;
+}
+
+.job_date {
+  align-self: flex-start;
+  font-size: 1em;
+  text-align: right;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.job_desc ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.job_desc li {
+  margin-bottom: 5px;
+}
+
+#connect {
+  background-color: #70904f;
+  margin: 25px;
+  padding: 10px 5px;
+  color: #000;
+  text-align: center;
+}
+
+#connect ul {
+  display: flex;
+  list-style-type: none;
+  margin: 10px 0;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#connect li {
+  margin: 0 15px;
+}
+
+#connect img {
+  width: 40%;
+  height: auto;
+}
+
+/* start of skill styling*/
+
+#skills {
+  background-color: #906a48;
   margin: 25px;
   padding: 10px 5px;
   color: #000;
 }
+
+/* End of skill styling*/
+
+#projects {
+  background-color: #70904f;
+  margin: 25px;
+  padding: 10px 5px;
+  color: #000;
+}
+
+/* The following is styling for connect images for my website
+
+.github {
+  border-radius: 8px;
+  width: 5%;
+  height: 5%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.linkedin {
+  border-radius: 8px;
+  width: 5%;
+  height: 5%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+ End of styling for connect images on my website*/
