@@ -1,9 +1,9 @@
-body {
+.container {
   margin: 0;
   background-color: #cccaca;
   color: #1a4e99;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1.25rem;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: left;
   color: #2a2a2a;
@@ -32,9 +32,8 @@ a {
   justify-content: space-between;
   top: 0;
   position: sticky;
-  color: #5dd076;
   padding: 5px;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   background-color: #ffffff;
 }
 
@@ -51,8 +50,8 @@ a {
 
 #about {
   background-color: #70904f;
-  margin: 25px;
-  padding: 10px 5px;
+  margin: 1em;
+  padding: 0.2em 0.5em;
   color: #000;
 }
 
@@ -62,8 +61,8 @@ a {
 
 #experience {
   background-color: #906a48;
-  margin: 25px;
-  padding: 10px 5px;
+  margin: 1em;
+  padding: 0.2em 1em;
   color: #000;
 }
 
@@ -72,23 +71,22 @@ a {
   background-color: #fbfbfb;
   margin: 0 auto;
   flex-direction: column;
-  border: 10px solid #ff0000; /* Border to work with CSS*/
 }
 
 .job_details {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .job_details span {
-  padding-bottom: 5px;
+  padding-bottom: 0.5em;
 }
 
 .job_date {
   align-self: flex-start;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: right;
   margin-left: auto;
   padding: 10px;
@@ -106,8 +104,8 @@ a {
 
 #connect {
   background-color: #70904f;
-  margin: 25px;
-  padding: 10px 5px;
+  margin: 1em;
+  padding: 0.2em 1em;
   color: #000;
   text-align: center;
 }
@@ -134,8 +132,8 @@ a {
 
 #skills {
   background-color: #906a48;
-  margin: 25px;
-  padding: 10px 5px;
+  margin: 1em;
+  padding: 0.2em 1em;
   color: #000;
 }
 
@@ -143,29 +141,106 @@ a {
 
 #projects {
   background-color: #70904f;
-  margin: 25px;
-  padding: 10px 5px;
+  margin: 1em;
+  padding: 0.2em 1em;
   color: #000;
 }
 
-/* The following is styling for connect images for my website
+/* Media query for mobile phones */
 
-.github {
-  border-radius: 8px;
-  width: 5%;
-  height: 5%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #fff;
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0.2em;
+    background-color: #088ba9c0;
+    color: #1a4e99;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+  }
+
+  #connect img {
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+  }
+
+  .job {
+    display: flex;
+    background-color: #906a48;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .job_details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75em;
+    font-size: 1rem;
+  }
+
+  .job_date {
+    align-self: flex-start;
+    font-size: 1rem;
+    text-align: right;
+    margin-left: auto;
+    padding: 0.75em;
+  }
+}
+/* end of mobile phone query */
+
+/* Media query for tablets */
+
+@media screen and (min-width: 600px) and (max-width: 780px) {
+  .container {
+    margin: 0;
+    background-color: #51919871;
+    color: #000000;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+  }
+
+  #connect img {
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+  }
+
+  .job {
+    display: flex;
+    background-color: #906a48;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .job_details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 1.2rem;
+  }
+
+  .job_date {
+    align-self: flex-start;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-left: auto;
+    padding: 1em;
+  }
+
+  .nav_headers {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+    padding: 0.5em;
+    font-size: 1.1rem;
+    background-color: #519198;
+  }
+
+  .navheader {
+    margin: 0 10px;
+    padding: 25px 10px;
+    font-size: 1.5rem;
+  }
 }
 
-.linkedin {
-  border-radius: 8px;
-  width: 5%;
-  height: 5%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #fff;
-}
-
- End of styling for connect images on my website*/
+/* end of styling for tablet */
