@@ -21,6 +21,7 @@
         <a class="nav_header" href="#connect">Connect</a>
         <a class="nav_header" href="#skills">Skills</a>
         <a class="nav_header" href="#projects">Projects</a>
+        <a class="nav_header" href="#leave_message">Leave a Message!</a>
       </nav>
       <!-- End of Nav header-->
 
@@ -150,10 +151,43 @@
       </section>
       <!-- End of projects -->
 
+      <section id="formSection">
+        <h2>Leave a Message</h2>
+
+        <form id="leave_message">
+          <label for="userFormName">Name: </label>
+          <input
+            type="text"
+            id="userFormName"
+            name="usersName"
+            required
+          /><br /><br />
+
+          <label for="userFormEmail">Email:</label>
+          <input
+            type="email"
+            id="userFormEmail"
+            name="usersEmail"
+            required
+          /><br /><br />
+
+          <label for="userFormMessage">Message:</label>
+          <textarea id="userFormMessage" name="usersMessage" required></textarea
+          ><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+
+      <!-- end of message form Section -->
+      <section id="messages">
+        <h2>Messages</h2>
+        <ul class="messageBoard"></ul>
+      </section>
+
+      <!--End of User created messages -->
       <footer></footer>
     </div>
     <!--- end of container-->
-    <footer></footer>
     <script src="js/index.js"></script>
   </body>
   <!-- End of body -->
