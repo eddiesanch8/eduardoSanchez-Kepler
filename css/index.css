@@ -32,14 +32,14 @@ a {
   justify-content: space-between;
   top: 0;
   position: sticky;
-  padding: 5px;
-  font-size: 1.1rem;
+  padding: 0.2em;
+  font-size: 1rem;
   background-color: #ffffff;
 }
 
 .navheader {
-  margin: 0 10px;
-  padding: 25px 10px;
+  margin: 0 1em;
+  padding: 0.2em 0.5em;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -128,6 +128,45 @@ a {
   height: auto;
 }
 
+/* start of formatting for our form section.  */
+
+#formSection {
+  background-color: #906a48;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+#messages {
+  background-color: #70904f;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+.messageBoard {
+  list-style: none;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 20%;
+  margin-bottom: 0.02em;
+}
+
+/* prevents our text box from being oversized by user  */
+
+textarea {
+  resize: vertical;
+  max-height: 10rem;
+}
+
 /* start of skill styling*/
 
 #skills {
@@ -198,8 +237,47 @@ a {
   margin: o auto;
   padding: 0.75em;
   color: #756d6d;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: bolder;
+}
+
+/* start of formatting for our form section.  */
+
+#formSection {
+  background-color: #906a48;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+#messages {
+  background-color: #70904f;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+.messageBoard {
+  list-style: none;
+  text-align: left;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 75%;
+  margin-bottom: 0.02em;
+}
+
+/* prevents our text box from being oversized by user  */
+
+textarea {
+  resize: vertical;
+  max-height: 3rem;
 }
 
 /* end of mobile phone query */
@@ -249,7 +327,7 @@ a {
     top: 0;
     position: sticky;
     padding: 0.5em;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: #519198;
   }
 
@@ -266,6 +344,44 @@ a {
   color: #756d6d;
   font-size: 1.2rem;
   font-weight: bolder;
+}
+
+/* start of formatting for our form section.  */
+
+#formSection {
+  background-color: #906a48;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+#messages {
+  background-color: #70904f;
+  margin: 1em;
+  padding: 0.2em 1em;
+  color: #000;
+}
+
+.messageBoard {
+  list-style: none;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 50%;
+  margin-bottom: 0.02em;
+}
+
+/* prevents our text box from being oversized by user  */
+
+textarea {
+  resize: vertical;
+  max-height: 5rem;
 }
 
 /* end of styling for tablet */
