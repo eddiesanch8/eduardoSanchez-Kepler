@@ -6,14 +6,14 @@ const thisYear = today.getFullYear();
 const webFooter = document.querySelector("footer");
 webFooter.className = "bottomFooter";
 
-//  Create a variable named copyright and use it to create a new paragraph (p) element
+//Creating Copyright
 
 const copyright = document.createElement("p");
 copyright.className = "copyright";
 copyright.innerHTML = ` Eduardo Sanchez ${thisYear} \u00A9 `;
 webFooter.appendChild(copyright);
 
-// List your technical skills by creating an Array of String values and store it in a variable named skills
+//List of technical skills that need to pop up
 
 const skills = ["CSS", "HTML", "Sales", "Javascript", "Leadership"];
 
@@ -26,8 +26,7 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
-// Handle Message Form Submit
-//  Open your index.js file and start at the bottom
+// Handling Messages
 
 const messageForm = document.getElementById("leave_message");
 
@@ -53,6 +52,8 @@ messageForm.addEventListener("submit", (event) => {
 
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `<a href="mailto:${emailData}">${nameData}</a> <span>${messageData} </span>`;
+  newMessage.target = "_blank";
+  newMessage.href = ` ${emailData}`;
 
   // Creating a new remove button element
   const removeButton = document.createElement("button");
@@ -64,7 +65,7 @@ messageForm.addEventListener("submit", (event) => {
     entry.remove();
   });
 
-  //remove button, append message
+  //Remove button, append message that user has created
 
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
@@ -72,13 +73,37 @@ messageForm.addEventListener("submit", (event) => {
   event.target.reset();
 });
 
-//  Create a variable named removeButton that makes a new <button> element
-// Set the inner text to "remove"
-// Set the type attribute to "button"
-// Add an event listener to the removeButton element that handles the "click" event
-// Inside the callback function, create a variable named entry that finds the button's parent element using DOM Traversal (hint: parentNode property)
-// Remove the entry element from the DOM (hint: remove method)
-//  Append the removeButton to the newMessage element
-// hint: appendChild method
-//  Append the newMessage to the messageList element
-//  Save and refresh your browser (or just check your browser for changes if using live extension)
+// Fetch API Assignment
+
+const gitRequest = fetch(`https://api.github.com/users/eddiesanch8/repos`)
+  // Parse data into JSCON, then manipulate data with DOM to include into HTML
+  .then((result) => result.json())
+  .then((data) => {
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    //iterate over the JSON() data using ForEach instead of [] notation
+    data.forEach((repository) => {
+      //setting up DOM for UL, introducing anchors
+      const project = document.createElement("li");
+      const projectLink = document.createElement("a");
+
+      // creating links that you can click on for repos
+      projectLink.textContent = repository.name;
+      projectLink.href = repository.html_url;
+      //creating a new tab for clicks
+      projectLink.target = "_blank";
+
+      // adding link to project
+      project.appendChild(projectLink);
+
+      // adding repos to the project list li
+      projectList.appendChild(project);
+    });
+
+    console.log(data);
+  })
+  // Error Catch
+  .catch((error) => {
+    console.error("Uh-oh, error:", error);
+  });
