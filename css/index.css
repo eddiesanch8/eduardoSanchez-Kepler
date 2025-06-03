@@ -1,9 +1,23 @@
-.container {
+/* css for background */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevents overflow of user messsage */
+
+body {
   margin: 0;
-  background-color: #cccaca;
-  color: #1a4e99;
   font-family: Arial, sans-serif;
   font-size: 1.25rem;
+  background: #6ab3dd;
+  background-image: url(../img/background2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 h1 {
@@ -20,39 +34,70 @@ h2 {
   color: #2a2a2a;
 }
 
-a {
-  color: #a1562d;
-  font-weight: 100;
+.copyright {
+  color: #e1702a;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
-/* The following is styling for different sections of my website*/
-
+/* Header styling */
 .nav_headers {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   top: 0;
   position: sticky;
-  padding: 0.2em;
+  padding: 1em;
   font-size: 1rem;
   background-color: #ffffff;
+  box-shadow: 0 0.5rem 1.5rem #414141;
 }
 
-.navheader {
-  margin: 0 1em;
-  padding: 0.2em 0.5em;
-  font-size: 2rem;
-  font-weight: 600;
+/* adding animation to headers */
+
+.nav_headers a {
+  color: #a1562d;
+  text-decoration: none;
+}
+
+.nav_headers a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 /* End of Nav styling*/
 
 /* Starting to style the about section*/
 
+.icon {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.iconhead {
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  border: 3px solid #a1562d;
+}
+
+.icon a:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.4;
+  -moz-opacity: 0.4;
+  overflow: hidden;
+  transition: transform 5s ease;
+  transform: scale(1.5);
+}
+
 #about {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 0.5em;
-  color: #000;
+  background-color: #ffffff;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
 }
 
 /* End of styling for about section */
@@ -60,15 +105,18 @@ a {
 /* The following is the start of exeperience styling for different sections of my website*/
 
 #experience {
-  background-color: #906a48;
+  background-color: #cac1e5;
   margin: 1em;
-  padding: 0.2em 1em;
   color: #000;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
 }
 
 .job {
   display: flex;
-  background-color: #fbfbfb;
   margin: 0 auto;
   flex-direction: column;
 }
@@ -103,17 +151,18 @@ a {
 }
 
 #connect {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 1em;
+  background-color: #ffffff;
   color: #000;
-  text-align: center;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
 }
 
 #connect ul {
   display: flex;
   list-style-type: none;
-  margin: 10px 0;
   justify-content: center;
   padding: 0;
   margin: 0;
@@ -124,24 +173,59 @@ a {
 }
 
 #connect img {
-  width: 40%;
+  width: 50%;
   height: auto;
 }
 
+/* start of skill styling*/
+
+#skills {
+  background-color: #cac1e5;
+  color: #000000;
+  font-size: 1rem;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
+}
+
+/* End of skill styling*/
+
+#projects {
+  background-color: #ffffff;
+  color: #000;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
+}
+
+#projects ul li {
+  list-style: none;
+  text-decoration: none;
+}
 /* start of formatting for our form section.  */
 
 #formSection {
-  background-color: #906a48;
-  margin: 1em;
-  padding: 0.2em 1em;
+  background-color: #cac1e5;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
   color: #000;
 }
 
 #messages {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 1em;
+  background-color: #ffffff;
   color: #000;
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 85%;
+  box-shadow: 0 0.5rem 1.5rem #000000;
 }
 
 .messageBoard {
@@ -149,14 +233,13 @@ a {
   text-align: left;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #ffffff;
 }
 
 label,
 input,
 textarea {
   display: block;
-  width: 20%;
+  width: 40%;
   margin-bottom: 0.02em;
 }
 
@@ -165,26 +248,6 @@ textarea {
 textarea {
   resize: vertical;
   max-height: 10rem;
-}
-
-/* start of skill styling*/
-
-#skills {
-  background-color: #ffffff;
-  margin: 1em;
-  padding: 0.2em 1em;
-  color: #756d6d;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* End of skill styling*/
-
-#projects {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 1em;
-  color: #000;
 }
 
 .bottomFooter {
@@ -196,8 +259,6 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .container {
-    margin: 0.2em;
-    background-color: #088ba9c0;
     color: #1a4e99;
     font-family: "Times New Roman", Times, serif;
     font-size: 1.2rem;
@@ -211,15 +272,12 @@ textarea {
 
   .job {
     display: flex;
-    background-color: #906a48;
-    margin: 0 auto;
     flex-direction: column;
   }
 
   .job_details {
     display: flex;
     justify-content: space-between;
-    padding: 0.75em;
     font-size: 1rem;
   }
 
@@ -227,16 +285,10 @@ textarea {
     align-self: flex-start;
     font-size: 1rem;
     text-align: right;
-    margin-left: auto;
-    padding: 0.75em;
   }
 }
 
 #skills {
-  background-color: #ffffff;
-  margin: o auto;
-  padding: 0.75em;
-  color: #756d6d;
   font-size: 1rem;
   font-weight: bolder;
 }
@@ -244,16 +296,10 @@ textarea {
 /* start of formatting for our form section.  */
 
 #formSection {
-  background-color: #906a48;
-  margin: 1em;
-  padding: 0.2em 1em;
   color: #000;
 }
 
 #messages {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 1em;
   color: #000;
 }
 
@@ -262,22 +308,13 @@ textarea {
   text-align: left;
   font-weight: 300;
   font-size: 0.8rem;
-  color: #ffffff;
 }
 
 label,
 input,
 textarea {
-  display: block;
-  width: 75%;
-  margin-bottom: 0.02em;
-}
-
-/* prevents our text box from being oversized by user  */
-
-textarea {
-  resize: vertical;
-  max-height: 3rem;
+  width: 65%;
+  margin-bottom: 0.5em;
 }
 
 /* end of mobile phone query */
@@ -286,9 +323,6 @@ textarea {
 
 @media screen and (min-width: 600px) and (max-width: 780px) {
   .container {
-    margin: 0;
-    background-color: #51919871;
-    color: #000000;
     font-family: "Courier New", Courier, monospace;
     font-size: 1.2rem;
   }
@@ -301,15 +335,12 @@ textarea {
 
   .job {
     display: flex;
-    background-color: #906a48;
-    margin: 0 auto;
     flex-direction: column;
   }
 
   .job_details {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
     font-size: 1.2rem;
   }
 
@@ -318,47 +349,37 @@ textarea {
     font-size: 1.2rem;
     text-align: right;
     margin-left: auto;
-    padding: 1em;
   }
 
   .nav_headers {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     top: 0;
     position: sticky;
-    padding: 0.5em;
-    font-size: 1rem;
-    background-color: #519198;
+    background-color: #ffffff;
   }
 
-  .navheader {
-    margin: 0 10px;
-    padding: 25px 10px;
-    font-size: 1.5rem;
+  #skills {
+    font-size: 1.2rem;
+    font-weight: bolder;
   }
 }
 
-#skills {
-  background-color: #ffffff;
-  padding: 1em;
-  color: #756d6d;
-  font-size: 1.2rem;
-  font-weight: bolder;
+label,
+input,
+textarea {
+  width: 50%;
+  margin-bottom: 0.5em;
 }
 
 /* start of formatting for our form section.  */
 
 #formSection {
-  background-color: #906a48;
-  margin: 1em;
-  padding: 0.2em 1em;
   color: #000;
 }
 
 #messages {
-  background-color: #70904f;
-  margin: 1em;
-  padding: 0.2em 1em;
   color: #000;
 }
 
@@ -366,22 +387,6 @@ textarea {
   list-style: none;
   text-align: left;
   font-size: 1.2rem;
-  color: #ffffff;
-}
-
-label,
-input,
-textarea {
-  display: block;
-  width: 50%;
-  margin-bottom: 0.02em;
-}
-
-/* prevents our text box from being oversized by user  */
-
-textarea {
-  resize: vertical;
-  max-height: 5rem;
 }
 
 /* end of styling for tablet */
